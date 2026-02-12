@@ -216,6 +216,65 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* SEO Collection Links */}
+      <section className="py-12">
+        <div className="mx-auto max-w-4xl px-4">
+          <h2 className="text-2xl font-bold text-center mb-8">
+            상황별 화환 문구 모음
+          </h2>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <Link
+              href="/seo/congratulation-wreath-message"
+              className="group rounded-xl border-2 border-border p-5 hover:border-yellow-300 hover:shadow-md transition-all"
+            >
+              <div className="text-2xl mb-2">&#127881;</div>
+              <h3 className="font-semibold mb-1 group-hover:text-yellow-700 transition-colors">축하 화환 문구 모음</h3>
+              <p className="text-xs text-muted-foreground">경사 축하 메시지 30선</p>
+            </Link>
+            <Link
+              href="/seo/condolence-wreath-message"
+              className="group rounded-xl border-2 border-border p-5 hover:border-gray-400 hover:shadow-md transition-all"
+            >
+              <div className="text-2xl mb-2">&#128330;&#65039;</div>
+              <h3 className="font-semibold mb-1 group-hover:text-gray-700 transition-colors">근조 화환 문구 모음</h3>
+              <p className="text-xs text-muted-foreground">조문 추모 메시지 30선</p>
+            </Link>
+            <Link
+              href="/seo/promotion-message"
+              className="group rounded-xl border-2 border-border p-5 hover:border-blue-300 hover:shadow-md transition-all"
+            >
+              <div className="text-2xl mb-2">&#128200;</div>
+              <h3 className="font-semibold mb-1 group-hover:text-blue-700 transition-colors">승진 축하 문구 모음</h3>
+              <p className="text-xs text-muted-foreground">영전 취임 축하 메시지 30선</p>
+            </Link>
+            <Link
+              href="/seo/opening-message"
+              className="group rounded-xl border-2 border-border p-5 hover:border-green-300 hover:shadow-md transition-all"
+            >
+              <div className="text-2xl mb-2">&#127978;</div>
+              <h3 className="font-semibold mb-1 group-hover:text-green-700 transition-colors">개업 축하 문구 모음</h3>
+              <p className="text-xs text-muted-foreground">창업 이전 축하 메시지 30선</p>
+            </Link>
+            <Link
+              href="/seo/wedding-message"
+              className="group rounded-xl border-2 border-border p-5 hover:border-pink-300 hover:shadow-md transition-all"
+            >
+              <div className="text-2xl mb-2">&#128141;</div>
+              <h3 className="font-semibold mb-1 group-hover:text-pink-700 transition-colors">결혼 축하 문구 모음</h3>
+              <p className="text-xs text-muted-foreground">웨딩 축하 메시지 30선</p>
+            </Link>
+            <Link
+              href="/seo/birthday-message"
+              className="group rounded-xl border-2 border-border p-5 hover:border-purple-300 hover:shadow-md transition-all"
+            >
+              <div className="text-2xl mb-2">&#127874;</div>
+              <h3 className="font-semibold mb-1 group-hover:text-purple-700 transition-colors">생일 축하 문구 모음</h3>
+              <p className="text-xs text-muted-foreground">환갑 칠순 축하 메시지 30선</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* SEO Content */}
       <section className="py-12 bg-muted/30">
         <div className="mx-auto max-w-4xl px-4">

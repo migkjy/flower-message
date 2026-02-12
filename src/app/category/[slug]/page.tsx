@@ -14,6 +14,7 @@ import {
   type Relationship,
   type Category,
 } from "@/lib/templates";
+import { SEO_PAGES } from "@/lib/seo-data";
 
 export function generateStaticParams() {
   return CATEGORIES.map((cat) => ({ slug: cat.slug }));
@@ -207,12 +208,23 @@ export default async function CategoryPage(props: {
         ))}
       </div>
 
-      <div className="mt-8 text-center">
+      <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
         <Link href={`/generate?category=${cat.slug}`}>
           <Button variant="outline" size="lg">
             더 많은 {cat.name} 문구 생성하기
           </Button>
         </Link>
+        {(() => {
+          const seoPage = SEO_PAGES.find((p) => p.categorySlug === cat.slug);
+          if (!seoPage) return null;
+          return (
+            <Link href={`/seo/${seoPage.slug}`}>
+              <Button variant="secondary" size="lg">
+                {cat.name} 문구 모음 30선 보기
+              </Button>
+            </Link>
+          );
+        })()}
       </div>
 
       {/* Florist CTA */}

@@ -82,21 +82,40 @@ export default function RootLayout({
         </header>
         <main>{children}</main>
         <footer className="border-t border-border bg-muted/30 mt-16">
-          <div className="mx-auto max-w-6xl px-4 py-8 text-center text-sm text-muted-foreground">
-            <p className="font-medium text-foreground mb-1">
-              플라워 메시지 (FloralLetter)
-            </p>
-            <p>
-              경조사 화환 문구를 무료로 생성하고, 화원에서 바로 주문하세요.
-            </p>
-            <p className="mt-2">
-              <a
-                href="/generate"
-                className="hover:text-foreground underline transition-colors"
-              >
-                문구 생성
-              </a>
-            </p>
+          <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-muted-foreground">
+            <div className="grid gap-8 md:grid-cols-3 mb-8">
+              <div>
+                <p className="font-medium text-foreground mb-3">
+                  플라워 메시지 (FloralLetter)
+                </p>
+                <p>
+                  경조사 화환 문구를 무료로 생성하고, 화원에서 바로 주문하세요.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium text-foreground mb-3">문구 모음</p>
+                <ul className="space-y-1.5">
+                  <li><a href="/seo/congratulation-wreath-message" className="hover:text-foreground transition-colors">축하 화환 문구 모음</a></li>
+                  <li><a href="/seo/condolence-wreath-message" className="hover:text-foreground transition-colors">근조 화환 문구 모음</a></li>
+                  <li><a href="/seo/promotion-message" className="hover:text-foreground transition-colors">승진 축하 문구 모음</a></li>
+                  <li><a href="/seo/opening-message" className="hover:text-foreground transition-colors">개업 축하 문구 모음</a></li>
+                  <li><a href="/seo/wedding-message" className="hover:text-foreground transition-colors">결혼 축하 문구 모음</a></li>
+                  <li><a href="/seo/birthday-message" className="hover:text-foreground transition-colors">생일 축하 문구 모음</a></li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-medium text-foreground mb-3">바로가기</p>
+                <ul className="space-y-1.5">
+                  <li><a href="/generate" className="hover:text-foreground transition-colors">문구 생성</a></li>
+                  <li><a href="/category/congratulation" className="hover:text-foreground transition-colors">축하 화환 문구</a></li>
+                  <li><a href="/category/condolence" className="hover:text-foreground transition-colors">근조 화환 문구</a></li>
+                  <li><a href="/category/promotion" className="hover:text-foreground transition-colors">승진 축하 문구</a></li>
+                </ul>
+              </div>
+            </div>
+            <div className="text-center border-t border-border pt-4">
+              <p>&copy; 2026 플라워 메시지 (FloralLetter). All rights reserved.</p>
+            </div>
           </div>
         </footer>
       </body>
