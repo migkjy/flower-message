@@ -5,8 +5,44 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export default function HomePage() {
+  const jsonLdWebsite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "꽃말 전달소",
+    alternateName: "FloralLetter",
+    url: "https://flower-message.vercel.app",
+    description:
+      "축하, 추모, 승진, 개업, 결혼, 생일 등 모든 경조사 화환 문구를 무료로 생성하세요.",
+    inLanguage: "ko",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://flower-message.vercel.app/generate?category={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  const jsonLdOrganization = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "꽃말 전달소",
+    alternateName: "FloralLetter",
+    url: "https://flower-message.vercel.app",
+    logo: "https://flower-message.vercel.app/opengraph-image",
+    description:
+      "경조사 화환 리본 문구 자동 생성 서비스. 축하, 추모, 승진, 개업, 결혼, 생일 화환 문구를 무료로 제공합니다.",
+    sameAs: [],
+  };
+
   return (
     <div className="mx-auto max-w-5xl px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebsite) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdOrganization) }}
+      />
       {/* Hero */}
       <section className="text-center mb-16">
         <h1 className="text-4xl font-bold tracking-tight mb-4 md:text-5xl">
