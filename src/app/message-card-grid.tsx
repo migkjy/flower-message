@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, memo } from "react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import type { SampleMessage } from "@/lib/sample-messages";
@@ -27,7 +27,7 @@ function storeSet(key: string, set: Set<string>) {
   }
 }
 
-export function MessageCardGrid({ messages }: MessageCardGridProps) {
+export const MessageCardGrid = memo(function MessageCardGrid({ messages }: MessageCardGridProps) {
   const [filter, setFilter] = useState<string | null>(null);
   const [likedIds, setLikedIds] = useState<Set<string>>(new Set());
   const [savedIds, setSavedIds] = useState<Set<string>>(new Set());
@@ -114,10 +114,12 @@ export function MessageCardGrid({ messages }: MessageCardGridProps) {
   return (
     <>
       {/* Category Filter Tabs */}
-      <div className="flex flex-wrap justify-center gap-2 mb-8">
+      <div className="flex flex-wrap justify-center gap-2 mb-8" role="tablist" aria-label="카테고리 필터">
         <button
+          role="tab"
+          aria-selected={!filter}
           onClick={() => setFilter(null)}
-          className={`rounded-full px-4 py-1.5 text-sm font-medium border transition-all ${
+          className={`rounded-full px-4 py-1.5 text-sm font-medium border transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
             !filter
               ? "bg-primary text-primary-foreground border-primary"
               : "bg-white text-muted-foreground border-border hover:border-primary/40"
@@ -127,9 +129,11 @@ export function MessageCardGrid({ messages }: MessageCardGridProps) {
         </button>
         {categories.map((cat) => (
           <button
+            role="tab"
+            aria-selected={filter === cat}
             key={cat}
             onClick={() => setFilter(filter === cat ? null : cat)}
-            className={`rounded-full px-4 py-1.5 text-sm font-medium border transition-all ${
+            className={`rounded-full px-4 py-1.5 text-sm font-medium border transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
               filter === cat
                 ? "bg-primary text-primary-foreground border-primary"
                 : "bg-white text-muted-foreground border-border hover:border-primary/40"
@@ -162,7 +166,7 @@ export function MessageCardGrid({ messages }: MessageCardGridProps) {
                 </Badge>
                 <button
                   onClick={() => toggleSave(msg.id)}
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:rounded"
                   aria-label={isSaved ? "저장 취소" : "저장"}
                 >
                   {isSaved ? (
@@ -206,7 +210,7 @@ export function MessageCardGrid({ messages }: MessageCardGridProps) {
                   {/* Like */}
                   <button
                     onClick={() => toggleLike(msg.id)}
-                    className="flex items-center gap-1 text-sm text-muted-foreground hover:text-red-500 transition-colors"
+                    className="flex items-center gap-1 text-sm text-muted-foreground hover:text-red-500 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:rounded"
                     aria-label={isLiked ? "좋아요 취소" : "좋아요"}
                   >
                     {isLiked ? (
@@ -239,7 +243,7 @@ export function MessageCardGrid({ messages }: MessageCardGridProps) {
                   {/* Share */}
                   <button
                     onClick={() => handleShare(msg)}
-                    className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:rounded"
                     aria-label="공유"
                   >
                     <svg
@@ -258,7 +262,8 @@ export function MessageCardGrid({ messages }: MessageCardGridProps) {
                 {/* Copy */}
                 <button
                   onClick={() => handleCopy(msg)}
-                  className={`text-xs font-medium px-3 py-1 rounded-full transition-all ${
+                  aria-label={isCopied ? "문구가 복사되었습니다" : "문구 복사"}
+                  className={`text-xs font-medium px-3 py-1 rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
                     isCopied
                       ? "bg-green-100 text-green-700"
                       : "bg-white/80 text-muted-foreground hover:bg-white hover:text-foreground border border-border/50"
@@ -272,7 +277,7 @@ export function MessageCardGrid({ messages }: MessageCardGridProps) {
               <div className="mt-3 text-center">
                 <Link
                   href={`/generate?category=${msg.categorySlug}`}
-                  className="text-xs text-primary hover:underline font-medium"
+                  className="text-xs text-primary hover:underline font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:rounded"
                 >
                   이 카테고리로 문구 만들기 &rarr;
                 </Link>
@@ -283,4 +288,4 @@ export function MessageCardGrid({ messages }: MessageCardGridProps) {
       </div>
     </>
   );
-}
+});

@@ -96,9 +96,10 @@ export default function HomePage() {
               <Link
                 key={cat.slug}
                 href={`/generate?category=${cat.slug}`}
-                className="group flex items-center gap-2 rounded-full border-2 border-border px-5 py-2.5 hover:border-primary/40 hover:shadow-md transition-all bg-white"
+                className="group flex items-center gap-2 rounded-full border-2 border-border px-5 py-2.5 hover:border-primary/40 hover:shadow-md transition-all bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                aria-label={`${cat.name} 문구 생성하기`}
               >
-                <span className="text-xl group-hover:scale-110 transition-transform">
+                <span className="text-xl group-hover:scale-110 transition-transform" aria-hidden="true">
                   {cat.icon}
                 </span>
                 <span className="text-sm font-medium">{cat.name}</span>
@@ -192,24 +193,26 @@ export default function HomePage() {
                   href="https://www.flowershop.kr"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-white text-green-700 px-6 py-3 font-medium hover:bg-white/90 transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full bg-white text-green-700 px-6 py-3 font-medium hover:bg-white/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  aria-label="꽃배달 전문점 (새 창에서 열림)"
                 >
-                  &#127803; 꽃배달 전문점
+                  <span aria-hidden="true">&#127803;</span> 꽃배달 전문점
                 </a>
                 <a
                   href="https://www.ggotbaedal.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-white/20 text-white border border-white/30 px-6 py-3 font-medium hover:bg-white/30 transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full bg-white/20 text-white border border-white/30 px-6 py-3 font-medium hover:bg-white/30 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  aria-label="전국 꽃배달 (새 창에서 열림)"
                 >
-                  &#127801; 전국 꽃배달
+                  <span aria-hidden="true">&#127801;</span> 전국 꽃배달
                 </a>
               </div>
             </div>
-            <div className="absolute -right-8 -top-8 text-[120px] opacity-10 select-none">
+            <div className="absolute -right-8 -top-8 text-[120px] opacity-10 select-none" aria-hidden="true">
               &#127804;
             </div>
-            <div className="absolute -left-4 -bottom-4 text-[80px] opacity-10 select-none">
+            <div className="absolute -left-4 -bottom-4 text-[80px] opacity-10 select-none" aria-hidden="true">
               &#127802;
             </div>
           </div>
@@ -225,49 +228,49 @@ export default function HomePage() {
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             <Link
               href="/seo/congratulation-wreath-message"
-              className="group rounded-xl border-2 border-border p-5 hover:border-yellow-300 hover:shadow-md transition-all"
+              className="group rounded-xl border-2 border-border p-5 hover:border-yellow-300 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
-              <div className="text-2xl mb-2">&#127881;</div>
+              <div className="text-2xl mb-2" aria-hidden="true">&#127881;</div>
               <h3 className="font-semibold mb-1 group-hover:text-yellow-700 transition-colors">축하 화환 문구 모음</h3>
               <p className="text-xs text-muted-foreground">경사 축하 메시지 30선</p>
             </Link>
             <Link
               href="/seo/condolence-wreath-message"
-              className="group rounded-xl border-2 border-border p-5 hover:border-gray-400 hover:shadow-md transition-all"
+              className="group rounded-xl border-2 border-border p-5 hover:border-gray-400 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
-              <div className="text-2xl mb-2">&#128330;&#65039;</div>
+              <div className="text-2xl mb-2" aria-hidden="true">&#128330;&#65039;</div>
               <h3 className="font-semibold mb-1 group-hover:text-gray-700 transition-colors">근조 화환 문구 모음</h3>
               <p className="text-xs text-muted-foreground">조문 추모 메시지 30선</p>
             </Link>
             <Link
               href="/seo/promotion-message"
-              className="group rounded-xl border-2 border-border p-5 hover:border-blue-300 hover:shadow-md transition-all"
+              className="group rounded-xl border-2 border-border p-5 hover:border-blue-300 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
-              <div className="text-2xl mb-2">&#128200;</div>
+              <div className="text-2xl mb-2" aria-hidden="true">&#128200;</div>
               <h3 className="font-semibold mb-1 group-hover:text-blue-700 transition-colors">승진 축하 문구 모음</h3>
               <p className="text-xs text-muted-foreground">영전 취임 축하 메시지 30선</p>
             </Link>
             <Link
               href="/seo/opening-message"
-              className="group rounded-xl border-2 border-border p-5 hover:border-green-300 hover:shadow-md transition-all"
+              className="group rounded-xl border-2 border-border p-5 hover:border-green-300 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
-              <div className="text-2xl mb-2">&#127978;</div>
+              <div className="text-2xl mb-2" aria-hidden="true">&#127978;</div>
               <h3 className="font-semibold mb-1 group-hover:text-green-700 transition-colors">개업 축하 문구 모음</h3>
               <p className="text-xs text-muted-foreground">창업 이전 축하 메시지 30선</p>
             </Link>
             <Link
               href="/seo/wedding-message"
-              className="group rounded-xl border-2 border-border p-5 hover:border-pink-300 hover:shadow-md transition-all"
+              className="group rounded-xl border-2 border-border p-5 hover:border-pink-300 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
-              <div className="text-2xl mb-2">&#128141;</div>
+              <div className="text-2xl mb-2" aria-hidden="true">&#128141;</div>
               <h3 className="font-semibold mb-1 group-hover:text-pink-700 transition-colors">결혼 축하 문구 모음</h3>
               <p className="text-xs text-muted-foreground">웨딩 축하 메시지 30선</p>
             </Link>
             <Link
               href="/seo/birthday-message"
-              className="group rounded-xl border-2 border-border p-5 hover:border-purple-300 hover:shadow-md transition-all"
+              className="group rounded-xl border-2 border-border p-5 hover:border-purple-300 hover:shadow-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
-              <div className="text-2xl mb-2">&#127874;</div>
+              <div className="text-2xl mb-2" aria-hidden="true">&#127874;</div>
               <h3 className="font-semibold mb-1 group-hover:text-purple-700 transition-colors">생일 축하 문구 모음</h3>
               <p className="text-xs text-muted-foreground">환갑 칠순 축하 메시지 30선</p>
             </Link>

@@ -123,41 +123,45 @@ export function GeneratorForm({ initialCategory }: GeneratorFormProps) {
   return (
     <div className="space-y-8">
       {/* Step 1: Category */}
-      <div>
-        <h2 className="text-lg font-semibold mb-4">1. 상황 선택</h2>
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+      <fieldset>
+        <legend className="text-lg font-semibold mb-4">1. 상황 선택</legend>
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3" role="radiogroup" aria-label="상황 카테고리 선택">
           {CATEGORIES.map((cat) => (
             <button
               key={cat.slug}
+              role="radio"
+              aria-checked={category === cat.slug}
               onClick={() => {
                 setCategory(cat.slug);
                 setResults([]);
               }}
-              className={`rounded-xl border-2 p-4 text-center transition-all ${
+              className={`rounded-xl border-2 p-4 text-center transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
                 category === cat.slug
                   ? "border-primary bg-primary/5 shadow-md"
                   : "border-border hover:border-primary/30 hover:shadow-sm"
               }`}
             >
-              <div className="text-2xl mb-1">{cat.icon}</div>
+              <div className="text-2xl mb-1" aria-hidden="true">{cat.icon}</div>
               <div className="text-sm font-medium">{cat.name}</div>
             </button>
           ))}
         </div>
-      </div>
+      </fieldset>
 
       {/* Step 2: Relationship */}
-      <div>
-        <h2 className="text-lg font-semibold mb-4">2. 관계 선택</h2>
-        <div className="flex flex-wrap gap-2">
+      <fieldset>
+        <legend className="text-lg font-semibold mb-4">2. 관계 선택</legend>
+        <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="관계 선택">
           {RELATIONSHIP_OPTIONS.map((opt) => (
             <button
               key={opt.value}
+              role="radio"
+              aria-checked={relationship === opt.value}
               onClick={() => {
                 setRelationship(opt.value);
                 setResults([]);
               }}
-              className={`rounded-full px-4 py-2 text-sm border transition-all ${
+              className={`rounded-full px-4 py-2 text-sm border transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
                 relationship === opt.value
                   ? "border-primary bg-primary text-primary-foreground"
                   : "border-border hover:border-primary/50"
@@ -167,20 +171,22 @@ export function GeneratorForm({ initialCategory }: GeneratorFormProps) {
             </button>
           ))}
         </div>
-      </div>
+      </fieldset>
 
       {/* Step 3: Formality */}
-      <div>
-        <h2 className="text-lg font-semibold mb-4">3. 격식 수준</h2>
-        <div className="flex gap-2">
+      <fieldset>
+        <legend className="text-lg font-semibold mb-4">3. 격식 수준</legend>
+        <div className="flex gap-2" role="radiogroup" aria-label="격식 수준 선택">
           {FORMALITY_OPTIONS.map((opt) => (
             <button
               key={opt.value}
+              role="radio"
+              aria-checked={formality === opt.value}
               onClick={() => {
                 setFormality(opt.value);
                 setResults([]);
               }}
-              className={`rounded-full px-4 py-2 text-sm border transition-all ${
+              className={`rounded-full px-4 py-2 text-sm border transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
                 formality === opt.value
                   ? "border-primary bg-primary text-primary-foreground"
                   : "border-border hover:border-primary/50"
@@ -190,7 +196,7 @@ export function GeneratorForm({ initialCategory }: GeneratorFormProps) {
             </button>
           ))}
         </div>
-      </div>
+      </fieldset>
 
       {/* Generate Button */}
       <Button
@@ -227,7 +233,7 @@ export function GeneratorForm({ initialCategory }: GeneratorFormProps) {
                     </CardTitle>
                     <button
                       onClick={() => toggleSave(msgKey)}
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="text-muted-foreground hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:rounded"
                       aria-label={isSaved ? "저장 취소" : "저장"}
                     >
                       {isSaved ? (
