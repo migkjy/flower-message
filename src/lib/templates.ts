@@ -108,6 +108,9 @@ const TEMPLATES: Record<Category, TemplateSet> = {
       "\uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4",
       "\u6176\u795D",
       "\u795D \u76DB\u4E8B",
+      "\u8B39\u795D",
+      "\u795D \u5609\u6176",
+      "\u795D \u7965\u4E8B",
     ],
     messages: {
       formal: {
@@ -230,6 +233,9 @@ const TEMPLATES: Record<Category, TemplateSet> = {
       "\uC0BC\uAC00 \uACE0\uC778\uC758 \uBA85\uBCF5\uC744 \uBE55\uB2C8\uB2E4",
       "\u54C0\u60BC",
       "\u8FFD\u60BC",
+      "\u5F14\u610F",
+      "\u54C0\u609F",
+      "\u8B39\u5F14 \u54C0\u60BC",
     ],
     messages: {
       formal: {
@@ -352,6 +358,9 @@ const TEMPLATES: Record<Category, TemplateSet> = {
       "\u795D \u5C31\u4EFB",
       "\uC2B9\uC9C4\uC744 \uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4",
       "\uC601\uC804\uC744 \uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4",
+      "\u795D \u5C31\u4EFB\u5C31\u4EFB",
+      "\u8B39\u795D \u6607\u9032",
+      "\u795D \u9AD8\u6607",
     ],
     messages: {
       formal: {
@@ -474,6 +483,9 @@ const TEMPLATES: Record<Category, TemplateSet> = {
       "\uAC1C\uC5C5\uC744 \uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4",
       "\u795D \u7E41\u660C",
       "\u795D \u5275\u696D",
+      "\u795D \u958B\u5E97",
+      "\u795D \u7E41\u76DB",
+      "\u8B39\u795D \u958B\u696D",
     ],
     messages: {
       formal: {
@@ -596,6 +608,9 @@ const TEMPLATES: Record<Category, TemplateSet> = {
       "\uACB0\uD63C\uC744 \uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4",
       "\u767E\u5E74\u4F73\u7D04",
       "\u795D \u5A5A\u79AE",
+      "\u795D \u826F\u7DE3",
+      "\u8B39\u795D \u7D50\u5A5A",
+      "\u795D \u5408\u5A5A",
     ],
     messages: {
       formal: {
@@ -718,6 +733,9 @@ const TEMPLATES: Record<Category, TemplateSet> = {
       "\uC0DD\uC77C\uC744 \uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4",
       "\u795D \u58FD\u5BB4",
       "\u795D \u56DE\u7532",
+      "\u795D \u53E4\u7A00",
+      "\u795D \u9577\u58FD",
+      "\u8B39\u795D \u751F\u65E5",
     ],
     messages: {
       formal: {
