@@ -9,6 +9,7 @@ const notoSansKR = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://flower-message.vercel.app"),
   title: {
     default: "화환 문구 생성기 - 경조사 화환 메시지 자동 생성",
     template: "%s | 화환 문구 생성기",

@@ -29,6 +29,7 @@ export function GeneratorForm({ initialCategory }: GeneratorFormProps) {
   const [relationship, setRelationship] = useState<Relationship>("colleague");
   const [results, setResults] = useState<GeneratedMessage[]>([]);
   const [copied, setCopied] = useState<number | null>(null);
+  const [shared, setShared] = useState<number | null>(null);
 
   function handleGenerate() {
     if (!category) return;
@@ -57,6 +58,34 @@ export function GeneratorForm({ initialCategory }: GeneratorFormProps) {
       setCopied(index);
       setTimeout(() => setCopied(null), 2000);
     }
+  }
+
+  async function handleShare(text: string, index: number) {
+    const shareData = {
+      title: "화환 문구",
+      text: text,
+      url: window.location.href,
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+        setShared(index);
+        setTimeout(() => setShared(null), 2000);
+      } else {
+        await handleCopy(text, index);
+      }
+    } catch {
+      // User cancelled share dialog
+    }
+  }
+
+  function handleKakaoShare(msg: GeneratedMessage) {
+    const url = `https://flower-message.vercel.app/generate?category=${category}`;
+    const kakaoUrl = `https://sharer.kakao.com/talk/friends/picker/link?app_key=&url=${encodeURIComponent(url)}&text=${encodeURIComponent(`${msg.ribbon}\n\n${msg.full}`)}`;
+    // Fallback: copy and alert user to paste in KakaoTalk
+    handleCopy(`${msg.ribbon}\n\n${msg.full}`, -1);
+    alert("문구가 클립보드에 복사되었습니다.\n카카오톡에 붙여넣기 해주세요.");
   }
 
   const selectedCat = CATEGORIES.find((c) => c.slug === category);
@@ -164,7 +193,7 @@ export function GeneratorForm({ initialCategory }: GeneratorFormProps) {
               </CardHeader>
               <CardContent className="p-4">
                 <p className="text-sm leading-relaxed mb-4">{msg.full}</p>
-                <div className="flex gap-2 justify-end">
+                <div className="flex flex-wrap gap-2 justify-end">
                   <Button
                     variant="outline"
                     size="sm"
@@ -180,6 +209,23 @@ export function GeneratorForm({ initialCategory }: GeneratorFormProps) {
                     onClick={() => handleCopy(msg.full, i + 100)}
                   >
                     {copied === i + 100 ? "복사됨!" : "메시지만 복사"}
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() =>
+                      handleShare(`${msg.ribbon}\n\n${msg.full}`, i + 200)
+                    }
+                  >
+                    {shared === i + 200 ? "공유됨!" : "공유하기"}
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="text-yellow-700 border-yellow-300 hover:bg-yellow-50"
+                    onClick={() => handleKakaoShare(msg)}
+                  >
+                    카카오톡 전송
                   </Button>
                 </div>
               </CardContent>
