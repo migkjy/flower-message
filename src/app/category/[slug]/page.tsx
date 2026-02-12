@@ -215,6 +215,34 @@ export default async function CategoryPage(props: {
         </Link>
       </div>
 
+      {/* Florist CTA */}
+      <div className="mt-8 rounded-2xl bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 p-6 text-center">
+        <p className="text-sm text-green-800 font-medium mb-2">
+          문구가 준비되셨나요?
+        </p>
+        <p className="text-lg font-bold text-green-900 mb-4">
+          화원에서 화환과 함께 보내보세요
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="https://www.flowershop.kr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-green-600 text-white px-5 py-2.5 text-sm font-medium hover:bg-green-700 transition-colors"
+          >
+            &#127803; 꽃배달 전문점
+          </a>
+          <a
+            href="https://www.ggotbaedal.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-green-300 text-green-700 px-5 py-2.5 text-sm font-medium hover:bg-green-50 transition-colors"
+          >
+            &#127801; 전국 꽃배달
+          </a>
+        </div>
+      </div>
+
       {/* SEO content */}
       <div className="mt-12 bg-muted/30 rounded-lg p-6">
         <h2 className="text-lg font-bold mb-3">

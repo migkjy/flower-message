@@ -1,0 +1,133 @@
+export interface SampleMessage {
+  id: string;
+  ribbon: string;
+  text: string;
+  category: string;
+  categorySlug: string;
+  icon: string;
+  likes: number;
+  gradient: string;
+}
+
+export const SAMPLE_MESSAGES: SampleMessage[] = [
+  {
+    id: "s1",
+    ribbon: "\u795D \u6176\u8CC0",
+    text: "\uACBD\uD558\uB4DC\uB9BD\uB2C8\uB2E4. \uC55E\uC73C\uB85C\uB3C4 \uB354\uC6B1 \uBE5B\uB098\uB294 \uC131\uACFC\uB97C \uC774\uB8E8\uC2DC\uAE38 \uC9C4\uC2EC\uC73C\uB85C \uAE30\uC6D0\uD569\uB2C8\uB2E4.",
+    category: "\uCD95\uD558",
+    categorySlug: "congratulation",
+    icon: "\uD83C\uDF89",
+    likes: 142,
+    gradient: "from-yellow-50 to-orange-50",
+  },
+  {
+    id: "s2",
+    ribbon: "\u8B39\u5F14",
+    text: "\uC0BC\uAC00 \uACE0\uC778\uC758 \uBA85\uBCF5\uC744 \uBE4C\uBA70, \uC720\uC871\uBD84\uB4E4\uAED8 \uAE4A\uC740 \uC704\uB85C\uC758 \uB9D0\uC500\uC744 \uB4DC\uB9BD\uB2C8\uB2E4.",
+    category: "\uCD94\uBAA8/\uC870\uBB38",
+    categorySlug: "condolence",
+    icon: "\uD83D\uDD4A\uFE0F",
+    likes: 98,
+    gradient: "from-gray-50 to-slate-50",
+  },
+  {
+    id: "s3",
+    ribbon: "\u795D \u6607\u9032",
+    text: "\uC2B9\uC9C4\uC744 \uC9C4\uC2EC\uC73C\uB85C \uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4. \uADF8\uAC04\uC758 \uB178\uACE0\uC640 \uD5CC\uC2E0\uC774 \uBE5B\uC744 \uBC1C\uD55C \uACB0\uACFC\uC785\uB2C8\uB2E4.",
+    category: "\uC2B9\uC9C4/\uCDE8\uC784",
+    categorySlug: "promotion",
+    icon: "\uD83D\uDCC8",
+    likes: 127,
+    gradient: "from-blue-50 to-indigo-50",
+  },
+  {
+    id: "s4",
+    ribbon: "\u795D \u958B\u696D",
+    text: "\uAC1C\uC5C5\uC744 \uC9C4\uC2EC\uC73C\uB85C \uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4. \uC0C8\uB85C\uC6B4 \uB3C4\uC804\uC5D0 \uBB34\uADB6\uD55C \uBC1C\uC804\uACFC \uBC88\uC601\uC774 \uD568\uAED8\uD558\uC2DC\uAE38 \uAE30\uC6D0\uD569\uB2C8\uB2E4.",
+    category: "\uAC1C\uC5C5/\uCC3D\uC5C5",
+    categorySlug: "opening",
+    icon: "\uD83C\uDFEA",
+    likes: 115,
+    gradient: "from-green-50 to-emerald-50",
+  },
+  {
+    id: "s5",
+    ribbon: "\u795D \u7D50\u5A5A",
+    text: "\uACB0\uD63C\uC744 \uC9C4\uC2EC\uC73C\uB85C \uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4. \uB450 \uBD84\uC758 \uC55E\uB0A0\uC5D0 \uC0AC\uB791\uACFC \uD589\uBCF5\uC774 \uB298 \uD568\uAED8\uD558\uC2DC\uAE38 \uAE30\uC6D0\uD569\uB2C8\uB2E4.",
+    category: "\uACB0\uD63C",
+    categorySlug: "wedding",
+    icon: "\uD83D\uDC8D",
+    likes: 203,
+    gradient: "from-pink-50 to-rose-50",
+  },
+  {
+    id: "s6",
+    ribbon: "\u795D \u751F\u8FB0",
+    text: "\uC0DD\uC2E0\uC744 \uC9C4\uC2EC\uC73C\uB85C \uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4. \uB298 \uAC74\uAC15\uD558\uC2DC\uACE0, \uD558\uC2DC\uB294 \uBAA8\uB4E0 \uC77C\uC5D0 \uC88B\uC740 \uACB0\uACFC\uAC00 \uD568\uAED8\uD558\uC2DC\uAE38 \uAE30\uC6D0\uD569\uB2C8\uB2E4.",
+    category: "\uC0DD\uC77C/\uC7A5\uC218",
+    categorySlug: "birthday",
+    icon: "\uD83C\uDF82",
+    likes: 156,
+    gradient: "from-purple-50 to-violet-50",
+  },
+  {
+    id: "s7",
+    ribbon: "\u795D \u69AE\u8F49",
+    text: "\uC601\uC804\uC744 \uACBD\uD558\uB4DC\uB9BD\uB2C8\uB2E4. \uD0C1\uC6D4\uD55C \uB9AC\uB354\uC2ED\uC73C\uB85C \uB354 \uD070 \uC131\uACFC\uB97C \uC774\uB8E8\uC2DC\uAE38 \uC9C4\uC2EC\uC73C\uB85C \uAE30\uC6D0\uD569\uB2C8\uB2E4.",
+    category: "\uC2B9\uC9C4/\uCDE8\uC784",
+    categorySlug: "promotion",
+    icon: "\uD83D\uDCC8",
+    likes: 89,
+    gradient: "from-blue-50 to-sky-50",
+  },
+  {
+    id: "s8",
+    ribbon: "\u795D \u7E41\u660C",
+    text: "\uAC1C\uC5C5\uC744 \uC9C4\uC2EC\uC73C\uB85C \uCD95\uD558\uB4DC\uB9AC\uBA70, \uADC0 \uC5C5\uCCB4\uC758 \uBB34\uADB6\uD55C \uBC88\uCC3D\uC744 \uAE30\uC6D0\uD569\uB2C8\uB2E4.",
+    category: "\uAC1C\uC5C5/\uCC3D\uC5C5",
+    categorySlug: "opening",
+    icon: "\uD83C\uDFEA",
+    likes: 78,
+    gradient: "from-lime-50 to-green-50",
+  },
+  {
+    id: "s9",
+    ribbon: "\u767E\u5E74\u4F73\u7D04",
+    text: "\uD654\uD63C\uC744 \uACBD\uD558\uB4DC\uB9BD\uB2C8\uB2E4. \uBC31\uB144\uD574\uB85C\uD558\uC2DC\uBA70 \uB298 \uD589\uBCF5\uD55C \uAC00\uC815\uC744 \uC774\uB8E8\uC2DC\uAE38 \uBC14\uB78D\uB2C8\uB2E4.",
+    category: "\uACB0\uD63C",
+    categorySlug: "wedding",
+    icon: "\uD83D\uDC8D",
+    likes: 134,
+    gradient: "from-rose-50 to-pink-50",
+  },
+  {
+    id: "s10",
+    ribbon: "\u8FFD\u6155",
+    text: "\uBE44\uBCF4\uC5D0 \uC811\uD558\uC5EC \uC0BC\uAC00 \uC870\uC758\uB97C \uD45C\uD569\uB2C8\uB2E4. \uACE0\uC778\uC758 \uBA85\uBCF5\uC744 \uBE55\uB2C8\uB2E4.",
+    category: "\uCD94\uBAA8/\uC870\uBB38",
+    categorySlug: "condolence",
+    icon: "\uD83D\uDD4A\uFE0F",
+    likes: 67,
+    gradient: "from-stone-50 to-gray-50",
+  },
+  {
+    id: "s11",
+    ribbon: "\u795D \u795D\u8CC0",
+    text: "\uAE30\uC05C \uACBD\uC0AC\uB97C \uC9C4\uC2EC\uC73C\uB85C \uCD95\uD558\uB4DC\uB9AC\uC624\uBA70, \uC55E\uC73C\uB85C\uB3C4 \uC2B9\uC2B9\uC7A5\uAD6C\uD558\uC2DC\uAE38 \uAE30\uC6D0\uD569\uB2C8\uB2E4.",
+    category: "\uCD95\uD558",
+    categorySlug: "congratulation",
+    icon: "\uD83C\uDF89",
+    likes: 91,
+    gradient: "from-amber-50 to-yellow-50",
+  },
+  {
+    id: "s12",
+    ribbon: "\uC0DD\uC77C \u795D\u8CC0",
+    text: "\uC0DD\uC77C\uC744 \uCD95\uD558\uD569\uB2C8\uB2E4! \uB298 \uAC74\uAC15\uD558\uC2DC\uACE0 \uC88B\uC740 \uC77C\uB9CC \uAC00\uB4DD\uD558\uC2DC\uAE38 \uBC14\uB78D\uB2C8\uB2E4.",
+    category: "\uC0DD\uC77C/\uC7A5\uC218",
+    categorySlug: "birthday",
+    icon: "\uD83C\uDF82",
+    likes: 112,
+    gradient: "from-fuchsia-50 to-purple-50",
+  },
+];

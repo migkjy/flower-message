@@ -23,7 +23,7 @@ export default async function GeneratePage(props: {
   const jsonLdWebApp = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "꽃말 전달소 - 화환 문구 생성기",
+    name: "플라워 메시지 - 화환 문구 생성기",
     alternateName: "FloralLetter Generator",
     url: "https://flower-message.vercel.app/generate",
     applicationCategory: "UtilityApplication",
