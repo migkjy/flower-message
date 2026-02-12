@@ -63,9 +63,10 @@ npm start        # 프로덕션 실행
 
 | 라우트 | 파일 | 렌더링 | 설명 |
 |--------|------|--------|------|
-| `/` | `src/app/page.tsx` | Static | SNS 갤러리 홈 (Hero + 카테고리 링크 + 인기 문구 카드 + 화원 CTA) |
-| `/generate` | `src/app/generate/page.tsx` | Dynamic | 문구 생성기 (카테고리/관계/격식 선택 -> 문구 5개 + 화원 CTA) |
+| `/` | `src/app/page.tsx` | Static | SNS 갤러리 홈 (Hero + 카테고리 링크 + 인기 문구 카드 + 문구 모음 링크 + 화원 CTA) |
+| `/generate` | `src/app/generate/page.tsx` | Dynamic | 문구 생성기 (카테고리/관계/격식 선택 -> 문구 6개 + 화원 CTA) |
 | `/category/[slug]` | `src/app/category/[slug]/page.tsx` | SSG | 카테고리별 문구 예시 + FAQ (SEO용) |
+| `/seo/[slug]` | `src/app/seo/[slug]/page.tsx` | SSG | 롱테일 SEO 페이지 (카테고리별 문구 30선 + 작성 팁 + 예절 + 관련 검색어) |
 | `/sitemap.xml` | `src/app/sitemap.ts` | Static | 사이트맵 |
 | `/robots.txt` | `src/app/robots.ts` | Static | 로봇 설정 |
 
@@ -81,12 +82,14 @@ src/
 │   │   ├── page.tsx                # 문구 생성 페이지
 │   │   └── generator-form.tsx      # 생성 폼 (client component)
 │   ├── category/[slug]/page.tsx    # 카테고리별 SEO 페이지
+│   ├── seo/[slug]/page.tsx        # 롱테일 SEO 페이지 (문구 30선 + 팁)
 │   ├── not-found.tsx
 │   ├── opengraph-image.tsx
 │   ├── sitemap.ts
 │   └── robots.ts
 ├── lib/
-│   ├── templates.ts                # 문구 템플릿 데이터 + 생성 로직 (핵심)
+│   ├── templates.ts                # 문구 템플릿 데이터 + 생성 로직 (핵심, 6개 카테고리 x 90개 = 540개)
+│   ├── seo-data.ts                 # SEO 페이지 메타데이터, 작성 팁, 예절, 키워드
 │   ├── sample-messages.ts          # 홈 갤러리용 샘플 메시지 12건
 │   └── utils.ts                    # cn() 유틸
 └── components/ui/                  # shadcn/ui 컴포넌트
@@ -114,7 +117,7 @@ src/
 
 MVP는 템플릿 기반 (`src/lib/templates.ts`):
 - 카테고리별 5개 리본(한자) + 격식x관계 조합별 5개 메시지
-- 총 6 카테고리 x 3 격식 x 5 관계 = 90개 조합, 각 5개 = 450개 문구
+- 총 6 카테고리 x 3 격식 x 5 관계 = 90개 조합, 각 6개 = 540개 문구
 - 격식 수준: 격식(formal) / 일반(normal) / 친근(casual)
 - 관계: 직장상사(boss) / 동료(colleague) / 거래처(business) / 친구(friend) / 가족(family)
 
