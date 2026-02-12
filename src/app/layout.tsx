@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     "플라워 메시지",
     "화환 주문",
   ],
+  manifest: "/manifest.json",
   openGraph: {
     title: "플라워 메시지 - 경조사 화환 문구 자동 생성 | FloralLetter",
     description:
@@ -40,6 +41,12 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  other: {
+    "mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-title": "플라워메시지",
+  },
 };
 
 export default function RootLayout({
@@ -49,7 +56,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head>
+        <meta name="theme-color" content="#E91E8C" />
+        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+      </head>
       <body className={`${notoSansKR.variable} font-sans antialiased`}>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js');
+                });
+              }
+            `,
+          }}
+        />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground focus:shadow-lg"
