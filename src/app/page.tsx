@@ -50,7 +50,7 @@ export default function HomePage() {
       {/* Features */}
       <section className="mb-16">
         <h2 className="text-2xl font-bold text-center mb-8">
-          왜 화환문구인가요?
+          왜 꽃말 전달소인가요?
         </h2>
         <div className="grid gap-6 md:grid-cols-3">
           <div className="text-center p-6">
@@ -189,7 +189,7 @@ export default function HomePage() {
           장례식 근조 화환까지 — 상황과 관계에 따라 적절한 표현이 달라지기 때문입니다.
         </p>
         <p className="text-muted-foreground mb-4">
-          화환문구 생성기는 6가지 카테고리(축하, 추모, 승진, 개업, 결혼, 생일)와
+          꽃말 전달소는 6가지 카테고리(축하, 추모, 승진, 개업, 결혼, 생일)와
           5가지 관계(상사, 동료, 거래처, 친구, 가족), 3가지 격식 수준을 조합하여
           상황에 딱 맞는 화환 리본 문구를 제공합니다.
         </p>

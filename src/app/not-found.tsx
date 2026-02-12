@@ -9,7 +9,7 @@ export default function NotFound() {
       <p className="text-muted-foreground mb-8">
         요청하신 페이지가 존재하지 않거나 이동되었습니다.
         <br />
-        화환 문구 생성기에서 맞춤 문구를 만들어보세요.
+        꽃말 전달소에서 맞춤 문구를 만들어보세요.
       </p>
       <div className="flex gap-4 justify-center">
         <Link href="/">

@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "화환 문구 생성기 - 경조사 화환 메시지 자동 생성";
+export const alt = "꽃말 전달소 - 경조사 화환 문구 자동 생성 | FloralLetter";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -30,7 +30,7 @@ export default async function Image() {
             textAlign: "center",
           }}
         >
-          화환 문구 생성기
+          꽃말 전달소
         </div>
         <div
           style={{
@@ -49,7 +49,7 @@ export default async function Image() {
             marginTop: 16,
           }}
         >
-          무료 맞춤형 화환 리본 문구 생성
+          FloralLetter - 무료 맞춤형 화환 리본 문구 생성
         </div>
       </div>
     ),

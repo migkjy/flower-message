@@ -11,8 +11,8 @@ const notoSansKR = Noto_Sans_KR({
 export const metadata: Metadata = {
   metadataBase: new URL("https://flower-message.vercel.app"),
   title: {
-    default: "화환 문구 생성기 - 경조사 화환 메시지 자동 생성",
-    template: "%s | 화환 문구 생성기",
+    default: "꽃말 전달소 - 경조사 화환 문구 자동 생성 | FloralLetter",
+    template: "%s | 꽃말 전달소",
   },
   description:
     "축하, 추모, 승진, 개업, 결혼, 생일 등 모든 경조사 화환 문구를 무료로 생성하세요. 관계와 격식에 맞는 맞춤형 화환 리본 문구를 제공합니다.",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "화환 리본 문구",
   ],
   openGraph: {
-    title: "화환 문구 생성기 - 경조사 화환 메시지 자동 생성",
+    title: "꽃말 전달소 - 경조사 화환 문구 자동 생성 | FloralLetter",
     description:
       "모든 경조사 화환 문구를 무료로 생성하세요. 상황, 관계, 격식에 맞는 맞춤형 문구를 제공합니다.",
     type: "website",
@@ -51,7 +51,7 @@ export default function RootLayout({
         <header className="border-b border-border bg-white">
           <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
             <a href="/" className="text-xl font-bold text-foreground">
-              화환문구
+              꽃말 전달소
             </a>
             <nav className="flex gap-4 text-sm text-muted-foreground">
               <a href="/" className="hover:text-foreground transition-colors">
