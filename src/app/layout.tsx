@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     "화환 메시지",
     "경조사 문구",
     "화환 리본 문구",
+    "꽃말",
+    "꽃말 모음",
+    "꽃 종류",
+    "꽃 갤러리",
   ],
   openGraph: {
     title: "꽃말 전달소 - 경조사 화환 문구 자동 생성 | FloralLetter",
@@ -58,6 +62,12 @@ export default function RootLayout({
                 홈
               </a>
               <a
+                href="/gallery"
+                className="hover:text-foreground transition-colors"
+              >
+                꽃 갤러리
+              </a>
+              <a
                 href="/generate"
                 className="hover:text-foreground transition-colors"
               >
@@ -69,10 +79,11 @@ export default function RootLayout({
         <main>{children}</main>
         <footer className="border-t border-border bg-muted/30 mt-16">
           <div className="mx-auto max-w-5xl px-4 py-8 text-center text-sm text-muted-foreground">
-            <p>경조사 화환 문구를 무료로 생성하세요.</p>
+            <p>200가지 이상의 꽃말 정보와 경조사 화환 문구를 무료로 제공합니다.</p>
             <p className="mt-1">
-              축하, 추모, 승진, 개업, 결혼, 생일 등 다양한 상황에 맞는 문구를
-              제공합니다.
+              <a href="/gallery" className="hover:text-foreground underline transition-colors">꽃 갤러리</a>
+              {" "}&middot;{" "}
+              <a href="/generate" className="hover:text-foreground underline transition-colors">문구 생성</a>
             </p>
           </div>
         </footer>

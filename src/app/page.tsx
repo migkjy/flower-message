@@ -1,10 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CATEGORIES } from "@/lib/templates";
+import { getPopularFlowers } from "@/lib/queries";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-export default function HomePage() {
+export const revalidate = 3600;
+
+export default async function HomePage() {
+  const popularFlowers = await getPopularFlowers();
   const jsonLdWebsite = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -112,6 +117,56 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Flower Gallery Preview */}
+      {popularFlowers.length > 0 && (
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-center mb-2">
+            인기 꽃말 모음
+          </h2>
+          <p className="text-center text-muted-foreground mb-8 text-sm">
+            200가지 이상의 꽃과 꽃말을 갤러리에서 만나보세요
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {popularFlowers.slice(0, 8).map((flower) => (
+              <Link key={flower.id} href={`/flower/${flower.slug}`}>
+                <div className="group relative rounded-xl overflow-hidden border border-border bg-card hover:shadow-lg transition-all h-48">
+                  {flower.imageUrl ? (
+                    <>
+                      <Image
+                        src={flower.imageUrl}
+                        alt={`${flower.name} - ${flower.meaning}`}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 640px) 50vw, 25vw"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
+                        <p className="font-bold text-sm">{flower.name}</p>
+                        <p className="text-xs opacity-90 line-clamp-1">{flower.meaning}</p>
+                      </div>
+                    </>
+                  ) : (
+                    <div className="flex flex-col items-center justify-center h-full p-3">
+                      <span className="text-3xl mb-2">&#127804;</span>
+                      <p className="font-bold text-sm text-center">{flower.name}</p>
+                      <p className="text-xs text-muted-foreground text-center line-clamp-1">{flower.meaning}</p>
+                    </div>
+                  )}
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-6">
+            <Link href="/gallery">
+              <Button variant="outline">
+                꽃 갤러리 전체 보기
+              </Button>
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* Popular Messages TOP 10 */}
       <section className="mb-16">
