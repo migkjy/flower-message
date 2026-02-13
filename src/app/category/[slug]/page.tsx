@@ -6,8 +6,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
   CATEGORIES,
-  FORMALITY_OPTIONS,
-  RELATIONSHIP_OPTIONS,
   generateMessages,
   getCategoryInfo,
   type Formality,
@@ -388,7 +386,7 @@ export default async function CategoryPage(props: {
               지나치게 감정적이거나 긴 문구보다는, 간결하고 진심 어린 표현이 적합합니다.
             </p>
             <p>
-              한자 리본 문구로는 '謹弔(근조)', '追慕(추모)', '哀悼(애도)' 등이
+              한자 리본 문구로는 &apos;謹弔(근조)&apos;, &apos;追慕(추모)&apos;, &apos;哀悼(애도)&apos; 등이
               일반적으로 사용됩니다. 보내는 분의 이름이나 단체명을 함께 기재합니다.
             </p>
           </div>
@@ -399,8 +397,8 @@ export default async function CategoryPage(props: {
               받는 분의 직위와 보내는 분의 관계에 따라 격식을 맞추는 것이 중요합니다.
             </p>
             <p>
-              한자 리본 문구로는 '祝 昇進(축 승진)', '祝 榮轉(축 영전)',
-              '祝 就任(축 취임)' 등을 사용합니다. 인사 시즌에는 수요가 급증합니다.
+              한자 리본 문구로는 &apos;祝 昇進(축 승진)&apos;, &apos;祝 榮轉(축 영전)&apos;,
+              &apos;祝 就任(축 취임)&apos; 등을 사용합니다. 인사 시즌에는 수요가 급증합니다.
             </p>
           </div>
         ) : cat.slug === "opening" ? (
@@ -410,8 +408,8 @@ export default async function CategoryPage(props: {
               기원하는 내용이 좋습니다. 거래처나 비즈니스 파트너에게 보내는 경우가 많습니다.
             </p>
             <p>
-              한자 리본 문구로는 '祝 開業(축 개업)', '祝 繁昌(축 번창)',
-              '祝 新裝開業(축 신장개업)' 등이 일반적입니다.
+              한자 리본 문구로는 &apos;祝 開業(축 개업)&apos;, &apos;祝 繁昌(축 번창)&apos;,
+              &apos;祝 新裝開業(축 신장개업)&apos; 등이 일반적입니다.
             </p>
           </div>
         ) : cat.slug === "wedding" ? (
@@ -421,8 +419,8 @@ export default async function CategoryPage(props: {
               내용이 적합합니다. 친구, 가족, 직장 동료 등 관계에 따라 톤을 조절하세요.
             </p>
             <p>
-              한자 리본 문구로는 '祝 結婚(축 결혼)', '祝 華婚(축 화혼)',
-              '百年佳約(백년가약)' 등을 사용합니다.
+              한자 리본 문구로는 &apos;祝 結婚(축 결혼)&apos;, &apos;祝 華婚(축 화혼)&apos;,
+              &apos;百年佳約(백년가약)&apos; 등을 사용합니다.
             </p>
           </div>
         ) : cat.slug === "birthday" ? (
@@ -432,8 +430,8 @@ export default async function CategoryPage(props: {
               환갑, 칠순 등 특별한 생신에는 격식을 갖춘 문구가 적합합니다.
             </p>
             <p>
-              한자 리본 문구로는 '祝 生辰(축 생신)', '祝 壽宴(축 수연)',
-              '祝 回甲(축 회갑)' 등이 사용됩니다.
+              한자 리본 문구로는 &apos;祝 生辰(축 생신)&apos;, &apos;祝 壽宴(축 수연)&apos;,
+              &apos;祝 回甲(축 회갑)&apos; 등이 사용됩니다.
             </p>
           </div>
         ) : (
@@ -443,7 +441,7 @@ export default async function CategoryPage(props: {
               좋은 기원을 담으면 됩니다. 받는 분과의 관계에 맞게 격식을 조절하세요.
             </p>
             <p>
-              한자 리본 문구로는 '祝 慶賀(축 경하)', '祝 祝賀(축 축하)' 등을
+              한자 리본 문구로는 &apos;祝 慶賀(축 경하)&apos;, &apos;祝 祝賀(축 축하)&apos; 등을
               사용합니다. 상황에 따라 구체적인 표현을 추가하면 좋습니다.
             </p>
           </div>

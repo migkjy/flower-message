@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback, useSyncExternalStore } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -38,6 +38,10 @@ function storeSet(key: string, set: Set<string>) {
   }
 }
 
+const subscribeNoop = () => () => {};
+const getSnapshotTrue = () => true;
+const getServerSnapshotFalse = () => false;
+
 export function GeneratorForm({ initialCategory }: GeneratorFormProps) {
   const [category, setCategory] = useState<Category | "">(
     (initialCategory as Category) || ""
@@ -46,13 +50,8 @@ export function GeneratorForm({ initialCategory }: GeneratorFormProps) {
   const [relationship, setRelationship] = useState<Relationship>("colleague");
   const [results, setResults] = useState<GeneratedMessage[]>([]);
   const [copied, setCopied] = useState<number | null>(null);
-  const [savedIds, setSavedIds] = useState<Set<string>>(new Set());
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setSavedIds(getStoredSet("fm_gen_saves"));
-    setMounted(true);
-  }, []);
+  const [savedIds, setSavedIds] = useState<Set<string>>(() => getStoredSet("fm_gen_saves"));
+  const mounted = useSyncExternalStore(subscribeNoop, getSnapshotTrue, getServerSnapshotFalse);
 
   function handleGenerate() {
     if (!category) return;

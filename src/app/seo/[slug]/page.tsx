@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
-  CATEGORIES,
   FORMALITY_OPTIONS,
   RELATIONSHIP_OPTIONS,
   generateMessages,
@@ -14,7 +13,7 @@ import {
   type Relationship,
   type Category,
 } from "@/lib/templates";
-import { SEO_PAGES, getSeoPageData, SEO_SLUG_MAP } from "@/lib/seo-data";
+import { SEO_PAGES, getSeoPageData } from "@/lib/seo-data";
 
 export function generateStaticParams() {
   return SEO_PAGES.map((page) => ({ slug: page.slug }));

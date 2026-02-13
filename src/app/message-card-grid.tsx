@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, memo } from "react";
+import { useState, useCallback, memo, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import type { SampleMessage } from "@/lib/sample-messages";
@@ -27,18 +27,16 @@ function storeSet(key: string, set: Set<string>) {
   }
 }
 
+const subscribeNoop = () => () => {};
+const getSnapshotTrue = () => true;
+const getServerSnapshotFalse = () => false;
+
 export const MessageCardGrid = memo(function MessageCardGrid({ messages }: MessageCardGridProps) {
   const [filter, setFilter] = useState<string | null>(null);
-  const [likedIds, setLikedIds] = useState<Set<string>>(new Set());
-  const [savedIds, setSavedIds] = useState<Set<string>>(new Set());
+  const [likedIds, setLikedIds] = useState<Set<string>>(() => getStoredSet("fm_likes"));
+  const [savedIds, setSavedIds] = useState<Set<string>>(() => getStoredSet("fm_saves"));
   const [copiedId, setCopiedId] = useState<string | null>(null);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setLikedIds(getStoredSet("fm_likes"));
-    setSavedIds(getStoredSet("fm_saves"));
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(subscribeNoop, getSnapshotTrue, getServerSnapshotFalse);
 
   const toggleLike = useCallback(
     (id: string) => {
