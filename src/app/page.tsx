@@ -190,7 +190,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href="https://www.flowershop.kr"
+                  href="https://www.cultwo-flower.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-white text-green-700 px-6 py-3 font-medium hover:bg-white/90 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
@@ -199,7 +199,7 @@ export default function HomePage() {
                   <span aria-hidden="true">&#127803;</span> 꽃배달 전문점
                 </a>
                 <a
-                  href="https://www.ggotbaedal.com"
+                  href="https://www.f-mans.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-white/20 text-white border border-white/30 px-6 py-3 font-medium hover:bg-white/30 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"

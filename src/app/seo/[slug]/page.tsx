@@ -302,7 +302,7 @@ export default async function SeoPage(props: {
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <a
-            href="https://www.flowershop.kr"
+            href="https://www.cultwo-flower.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full bg-green-600 text-white px-5 py-2.5 text-sm font-medium hover:bg-green-700 transition-colors"
@@ -310,7 +310,7 @@ export default async function SeoPage(props: {
             &#127803; 꽃배달 전문점
           </a>
           <a
-            href="https://www.ggotbaedal.com"
+            href="https://www.f-mans.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-green-300 text-green-700 px-5 py-2.5 text-sm font-medium hover:bg-green-50 transition-colors"

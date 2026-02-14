@@ -111,7 +111,7 @@ src/
 1. **SNS 갤러리 홈**: Pinterest/Instagram 스타일 masonry 카드 레이아웃, 카테고리 필터 탭
 2. **문구 생성기**: 카테고리 + 관계(5종) + 격식(3종) 선택 -> 맞춤 문구 5개 생성
 3. **소셜 기능**: 좋아요(하트+카운트), 저장(북마크), 공유(Web Share API + clipboard 폴백) - 모두 localStorage 기반, 로그인 불요
-4. **화원 연결 CTA**: 문구 생성 결과 하단 + 홈 배너 + 카테고리 페이지에 화원 외부 링크 (flowershop.kr, ggotbaedal.com)
+4. **화원 연결 CTA**: 문구 생성 결과 하단 + 홈 배너 + 카테고리 페이지에 화원 외부 링크 (cultwo-flower.com, f-mans.com)
 
 ## 문구 생성 방식
 
