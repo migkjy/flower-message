@@ -116,7 +116,7 @@ src/
 ## 문구 생성 방식
 
 MVP는 템플릿 기반 (`src/lib/templates.ts`):
-- 카테고리별 5개 리본(한자) + 격식x관계 조합별 5개 메시지
+- 카테고리별 8개 리본(한글) + 격식x관계 조합별 6개 메시지
 - 총 6 카테고리 x 3 격식 x 5 관계 = 90개 조합, 각 6개 = 540개 문구
 - 격식 수준: 격식(formal) / 일반(normal) / 친근(casual)
 - 관계: 직장상사(boss) / 동료(colleague) / 거래처(business) / 친구(friend) / 가족(family)

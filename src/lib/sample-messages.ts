@@ -13,7 +13,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   // ===== 축하 (congratulation) - 5건 =====
   {
     id: "s1",
-    ribbon: "祝 慶賀",
+    ribbon: "축 경하",
     text: "경하드립니다. 앞으로도 더욱 빛나는 성과를 이루시길 진심으로 기원합니다.",
     category: "축하",
     categorySlug: "congratulation",
@@ -23,7 +23,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s11",
-    ribbon: "祝 祝賀",
+    ribbon: "축 축하",
     text: "기쁜 경사를 진심으로 축하드리오며, 앞으로도 승승장구하시길 기원합니다.",
     category: "축하",
     categorySlug: "congratulation",
@@ -33,7 +33,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s13",
-    ribbon: "祝 榮光",
+    ribbon: "축 영광",
     text: "정말 축하해! 네가 열심히 한 결과라 더 뿌듯하다. 앞으로도 좋은 일만 가득하길!",
     category: "축하",
     categorySlug: "congratulation",
@@ -43,7 +43,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s14",
-    ribbon: "祝 慶事",
+    ribbon: "축 경사",
     text: "경사가 있으시다니 축하드립니다. 귀 가정에 늘 행복이 가득하시길 바랍니다.",
     category: "축하",
     categorySlug: "congratulation",
@@ -53,7 +53,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s15",
-    ribbon: "祝 賀",
+    ribbon: "축 하",
     text: "축하합니다. 좋은 소식 전해 주셔서 저도 기쁩니다. 더 좋은 일만 있으시길 바랍니다.",
     category: "축하",
     categorySlug: "congratulation",
@@ -65,7 +65,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   // ===== 추모/조문 (condolence) - 5건 =====
   {
     id: "s2",
-    ribbon: "謹弔",
+    ribbon: "근조",
     text: "삼가 고인의 명복을 빌며, 유족분들께 깊은 위로의 말씀을 드립니다.",
     category: "추모/조문",
     categorySlug: "condolence",
@@ -75,7 +75,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s10",
-    ribbon: "追慕",
+    ribbon: "추모",
     text: "비보에 접하여 삼가 조의를 표합니다. 고인의 명복을 빕니다.",
     category: "추모/조문",
     categorySlug: "condolence",
@@ -85,7 +85,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s16",
-    ribbon: "哀悼",
+    ribbon: "애도",
     text: "말로 다 표현할 수 없는 슬픔에 깊이 공감하며, 삼가 조의를 표합니다. 유족분들의 슬픔이 하루빨리 위로받으시길 기원합니다.",
     category: "추모/조문",
     categorySlug: "condolence",
@@ -95,7 +95,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s17",
-    ribbon: "弔意",
+    ribbon: "조의",
     text: "갑작스러운 부고 소식에 마음이 무겁습니다. 고인의 평안한 안식을 빌겠습니다.",
     category: "추모/조문",
     categorySlug: "condolence",
@@ -105,7 +105,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s18",
-    ribbon: "謹弔",
+    ribbon: "근조",
     text: "슬픈 소식에 깊은 위로를 전합니다. 어려운 시간 잘 이겨내시길 바라며, 곁에서 힘이 되어드리겠습니다.",
     category: "추모/조문",
     categorySlug: "condolence",
@@ -117,7 +117,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   // ===== 승진/취임 (promotion) - 5건 =====
   {
     id: "s3",
-    ribbon: "祝 昇進",
+    ribbon: "축 승진",
     text: "승진을 진심으로 축하드립니다. 그간의 노고와 헌신이 빛을 발한 결과입니다.",
     category: "승진/취임",
     categorySlug: "promotion",
@@ -127,7 +127,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s7",
-    ribbon: "祝 榮轉",
+    ribbon: "축 영전",
     text: "영전을 경하드립니다. 탁월한 리더십으로 더 큰 성과를 이루시길 진심으로 기원합니다.",
     category: "승진/취임",
     categorySlug: "promotion",
@@ -137,7 +137,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s19",
-    ribbon: "祝 就任",
+    ribbon: "축 취임",
     text: "취임을 축하드립니다. 새로운 자리에서 더욱 뜻깊은 성과를 이루시리라 믿습니다. 항상 응원하겠습니다.",
     category: "승진/취임",
     categorySlug: "promotion",
@@ -147,7 +147,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s20",
-    ribbon: "祝 昇進",
+    ribbon: "축 승진",
     text: "승진 축하해! 네 노력을 누구보다 잘 알기에 정말 기쁘다. 멋진 리더가 될 거야!",
     category: "승진/취임",
     categorySlug: "promotion",
@@ -157,7 +157,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s21",
-    ribbon: "祝 昇任",
+    ribbon: "축 승임",
     text: "승진을 축하합니다. 앞으로 더 넓은 무대에서 역량을 펼치시길 기대합니다.",
     category: "승진/취임",
     categorySlug: "promotion",
@@ -169,7 +169,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   // ===== 개업/창업 (opening) - 5건 =====
   {
     id: "s4",
-    ribbon: "祝 開業",
+    ribbon: "축 개업",
     text: "개업을 진심으로 축하드립니다. 새로운 도전에 무궁한 발전과 번영이 함께하시길 기원합니다.",
     category: "개업/창업",
     categorySlug: "opening",
@@ -179,7 +179,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s8",
-    ribbon: "祝 繁昌",
+    ribbon: "축 번창",
     text: "개업을 진심으로 축하드리며, 귀 업체의 무궁한 번창을 기원합니다.",
     category: "개업/창업",
     categorySlug: "opening",
@@ -189,7 +189,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s22",
-    ribbon: "祝 新裝開業",
+    ribbon: "축 신장개업",
     text: "새 출발을 축하합니다! 사장님의 열정이라면 분명 크게 성공하실 겁니다. 번창하세요!",
     category: "개업/창업",
     categorySlug: "opening",
@@ -199,7 +199,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s23",
-    ribbon: "祝 創業",
+    ribbon: "축 창업",
     text: "창업을 진심으로 축하드립니다. 새로운 시작이 큰 결실로 이어지시길 기원합니다. 항상 응원하겠습니다.",
     category: "개업/창업",
     categorySlug: "opening",
@@ -209,7 +209,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s24",
-    ribbon: "祝 移轉開業",
+    ribbon: "축 이전개업",
     text: "이전 개업을 축하드립니다. 더 넓은 공간에서 더 큰 성장을 이루시길 기대합니다.",
     category: "개업/창업",
     categorySlug: "opening",
@@ -221,7 +221,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   // ===== 결혼 (wedding) - 5건 =====
   {
     id: "s5",
-    ribbon: "祝 結婚",
+    ribbon: "축 결혼",
     text: "결혼을 진심으로 축하드립니다. 두 분의 앞날에 사랑과 행복이 늘 함께하시길 기원합니다.",
     category: "결혼",
     categorySlug: "wedding",
@@ -231,7 +231,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s9",
-    ribbon: "百年佳約",
+    ribbon: "백년가약",
     text: "화혼을 경하드립니다. 백년해로하시며 늘 행복한 가정을 이루시길 바랍니다.",
     category: "결혼",
     categorySlug: "wedding",
@@ -241,7 +241,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s25",
-    ribbon: "祝 華婚",
+    ribbon: "축 화혼",
     text: "결혼 정말 축하해! 둘이 함께라면 어떤 어려움도 이겨낼 수 있을 거야. 행복하게 잘 살아!",
     category: "결혼",
     categorySlug: "wedding",
@@ -251,7 +251,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s26",
-    ribbon: "祝 結婚",
+    ribbon: "축 결혼",
     text: "두 분의 아름다운 결합을 진심으로 축하드립니다. 서로를 아끼며 행복한 가정을 꾸려 나가시길 기원합니다.",
     category: "결혼",
     categorySlug: "wedding",
@@ -261,7 +261,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s27",
-    ribbon: "永遠佳約",
+    ribbon: "영원가약",
     text: "결혼 축하합니다. 두 분의 사랑이 영원하길 바라며, 새 출발을 응원합니다.",
     category: "결혼",
     categorySlug: "wedding",
@@ -273,7 +273,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   // ===== 생일/장수 (birthday) - 5건 =====
   {
     id: "s6",
-    ribbon: "祝 生辰",
+    ribbon: "축 생신",
     text: "생신을 진심으로 축하드립니다. 늘 건강하시고, 하시는 모든 일에 좋은 결과가 함께하시길 기원합니다.",
     category: "생일/장수",
     categorySlug: "birthday",
@@ -283,7 +283,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s12",
-    ribbon: "生日 祝賀",
+    ribbon: "생일 축하",
     text: "생일을 축하합니다! 늘 건강하시고 좋은 일만 가득하시길 바랍니다.",
     category: "생일/장수",
     categorySlug: "birthday",
@@ -293,7 +293,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s28",
-    ribbon: "祝 回甲",
+    ribbon: "축 회갑",
     text: "환갑을 진심으로 축하드립니다. 만수무강하시고 늘 건강하시어 가정에 기쁨이 가득하시길 기원합니다.",
     category: "생일/장수",
     categorySlug: "birthday",
@@ -303,7 +303,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s29",
-    ribbon: "祝 壽宴",
+    ribbon: "축 수연",
     text: "생신 축하드려요! 항상 행복하고 웃을 일만 가득하시길 바랍니다. 오래오래 건강하세요!",
     category: "생일/장수",
     categorySlug: "birthday",
@@ -313,7 +313,7 @@ export const SAMPLE_MESSAGES: SampleMessage[] = [
   },
   {
     id: "s30",
-    ribbon: "祝 古稀",
+    ribbon: "축 고희",
     text: "칠순을 진심으로 축하드립니다. 항상 건강하시고, 가족과 함께 행복한 나날 보내시길 기원합니다.",
     category: "생일/장수",
     categorySlug: "birthday",

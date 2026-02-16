@@ -296,7 +296,7 @@ export default function HomePage() {
             수준을 조합하여 상황에 딱 맞는 화환 리본 문구를 제공합니다.
           </p>
           <p className="text-muted-foreground">
-            한자 리본 문구(祝 昇進, 謹弔 등)와 한글 메시지를 함께 제공하여,
+            리본 문구(축 승진, 근조 등)와 메시지를 함께 제공하여,
             화환 주문 시 바로 사용할 수 있습니다. 무료로 이용하세요.
           </p>
         </div>

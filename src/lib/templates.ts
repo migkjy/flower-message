@@ -103,14 +103,14 @@ interface TemplateSet {
 const TEMPLATES: Record<Category, TemplateSet> = {
   congratulation: {
     ribbons: [
-      "\u795D \u6176\u8CC0",
-      "\u795D \u795D\u8CC0",
-      "\uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4",
-      "\u6176\u795D",
-      "\u795D \u76DB\u4E8B",
-      "\u8B39\u795D",
-      "\u795D \u5609\u6176",
-      "\u795D \u7965\u4E8B",
+      "축 경하",
+      "축 축하",
+      "축하드립니다",
+      "경축",
+      "축 성사",
+      "근축",
+      "축 가경",
+      "축 상사",
     ],
     messages: {
       formal: {
@@ -243,14 +243,14 @@ const TEMPLATES: Record<Category, TemplateSet> = {
   },
   condolence: {
     ribbons: [
-      "\u8B39\u5F14",
-      "\u8FFD\u6155",
-      "\uC0BC\uAC00 \uACE0\uC778\uC758 \uBA85\uBCF5\uC744 \uBE55\uB2C8\uB2E4",
-      "\u54C0\u60BC",
-      "\u8FFD\u60BC",
-      "\u5F14\u610F",
-      "\u54C0\u609F",
-      "\u8B39\u5F14 \u54C0\u60BC",
+      "근조",
+      "추모",
+      "삼가 고인의 명복을 빕니다",
+      "애도",
+      "추도",
+      "조의",
+      "애모",
+      "근조 애도",
     ],
     messages: {
       formal: {
@@ -383,14 +383,14 @@ const TEMPLATES: Record<Category, TemplateSet> = {
   },
   promotion: {
     ribbons: [
-      "\u795D \u6607\u9032",
-      "\u795D \u69AE\u8F49",
-      "\u795D \u5C31\u4EFB",
-      "\uC2B9\uC9C4\uC744 \uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4",
-      "\uC601\uC804\uC744 \uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4",
-      "\u795D \u5C31\u4EFB\u5C31\u4EFB",
-      "\u8B39\u795D \u6607\u9032",
-      "\u795D \u9AD8\u6607",
+      "축 승진",
+      "축 영전",
+      "축 취임",
+      "승진을 축하드립니다",
+      "영전을 축하드립니다",
+      "축 신임",
+      "근축 승진",
+      "축 고승",
     ],
     messages: {
       formal: {
@@ -523,14 +523,14 @@ const TEMPLATES: Record<Category, TemplateSet> = {
   },
   opening: {
     ribbons: [
-      "\u795D \u958B\u696D",
-      "\u795D \u65B0\u88DD\u958B\u696D",
-      "\uAC1C\uC5C5\uC744 \uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4",
-      "\u795D \u7E41\u660C",
-      "\u795D \u5275\u696D",
-      "\u795D \u958B\u5E97",
-      "\u795D \u7E41\u76DB",
-      "\u8B39\u795D \u958B\u696D",
+      "축 개업",
+      "축 신장개업",
+      "개업을 축하드립니다",
+      "축 번창",
+      "축 창업",
+      "축 개점",
+      "축 번성",
+      "근축 개업",
     ],
     messages: {
       formal: {
@@ -663,14 +663,14 @@ const TEMPLATES: Record<Category, TemplateSet> = {
   },
   wedding: {
     ribbons: [
-      "\u795D \u7D50\u5A5A",
-      "\u795D \u83EF\u5A5A",
-      "\uACB0\uD63C\uC744 \uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4",
-      "\u767E\u5E74\u4F73\u7D04",
-      "\u795D \u5A5A\u79AE",
-      "\u795D \u826F\u7DE3",
-      "\u8B39\u795D \u7D50\u5A5A",
-      "\u795D \u5408\u5A5A",
+      "축 결혼",
+      "축 화혼",
+      "결혼을 축하드립니다",
+      "백년가약",
+      "축 혼례",
+      "축 양연",
+      "근축 결혼",
+      "축 합혼",
     ],
     messages: {
       formal: {
@@ -803,14 +803,14 @@ const TEMPLATES: Record<Category, TemplateSet> = {
   },
   birthday: {
     ribbons: [
-      "\u795D \u751F\u8FB0",
-      "\u751F\u65E5 \u795D\u8CC0",
-      "\uC0DD\uC77C\uC744 \uCD95\uD558\uB4DC\uB9BD\uB2C8\uB2E4",
-      "\u795D \u58FD\u5BB4",
-      "\u795D \u56DE\u7532",
-      "\u795D \u53E4\u7A00",
-      "\u795D \u9577\u58FD",
-      "\u8B39\u795D \u751F\u65E5",
+      "축 생신",
+      "생일 축하",
+      "생일을 축하드립니다",
+      "축 수연",
+      "축 회갑",
+      "축 고희",
+      "축 장수",
+      "근축 생일",
     ],
     messages: {
       formal: {

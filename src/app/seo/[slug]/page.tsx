@@ -369,7 +369,7 @@ export default async function SeoPage(props: {
         </p>
         <p className="text-sm text-muted-foreground">
           화환 주문 시 리본에 들어갈 문구가 고민된다면, 플라워 메시지에서 상황에
-          맞는 문구를 찾아보세요. 한자 리본 문구와 한글 메시지를 함께 제공하여
+          맞는 문구를 찾아보세요. 리본 문구와 메시지를 함께 제공하여
           바로 사용할 수 있습니다.
         </p>
       </section>
